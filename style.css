@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.container{
+  width: auto;
+  background: white;
+  padding: 60px 40px;
+}
+header{
+  font-size: 40px;
+  margin: 40px 0px 60px 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+.input-field, form .button{
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+}
+input:focus{
+  border: 1px solid #1DA1F2;
+}
+.input-field label, span.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
+}
+span.show{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+  visibility: visible;
+}
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(-33px);
+  background: white;
+  font-size: 16px;
+  color: #1DA1F2;
+}
+form .button{
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 111;
+}
+.button .inner{
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  z-index: -1;
+  transition: all .4s;
+  background: crimson;
+}
+.button:hover .inner{
+  left: 0;
+}
+.button input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+.container .auth{
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: grey;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+}
+
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span{
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message-text{
+  color: #d9534f;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: whitesmoke;
+}
+
+.select-container {
+  width: 100%;
+  margin: 1em auto;
+  z-index: 99999;
+} 
+
+.select-label {
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 10px;
+}
+
+.select {
+      width: auto;
+      position: relative;
+}
+
+.selected-option {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 3px;
+      border: .5px solid #ccc
+
+}
+
+.icon,.select-value {
+    padding: 10px 15px;
+}
+.icon {
+    border-left: .5px solid #ccc;
+}
+      
+.options {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 5px;
+        border: .5px solid #ccc;
+        border-radius: 3px;
+}
+.options[data-toggle="collapsed"] {
+        display: none;
+}
+.option {
+        padding: 10px 15px;
+              cursor: pointer;
+          }
+          .option:hover {
+              background-color: whitesmoke;
+          }
+
+
+          .wrapper {
+            margin: 0 auto;
+            padding: 40px;
+            max-width: 800px;
+          }
+          
+          .table {
+            margin: 0 0 40px 0;
+            width: 100%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            display: table;
+          }
+          @media screen and (max-width: 580px) {
+            .table {
+              display: block;
+            }
+          }
+          
+          .row {
+            display: table-row;
+            background: #f6f6f6;
+          }
+          .row:nth-of-type(odd) {
+            background: #e9e9e9;
+          }
+          .row.header {
+            font-weight: 900;
+            color: #ffffff;
+            background: #ea6153;
+          }
+          .row.green {
+            background: #27ae60;
+          }
+          .row.blue {
+            background: #2980b9;
+          }
+          @media screen and (max-width: 580px) {
+            .row {
+              padding: 14px 0 7px;
+              display: block;
+            }
+            .row.header {
+              padding: 0;
+              height: 6px;
+            }
+            .row.header .cell {
+              display: none;
+            }
+            .row .cell {
+              margin-bottom: 10px;
+            }
+            .row .cell:before {
+              margin-bottom: 3px;
+              content: attr(data-title);
+              min-width: 98px;
+              font-size: 10px;
+              line-height: 10px;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #969696;
+              display: block;
+            }
+          }
+          
+          .cell {
+            padding: 6px 12px;
+            display: table-cell;
+          }
+          @media screen and (max-width: 580px) {
+            .cell {
+              padding: 2px 16px;
+              display: block;
+            }
+          }
+
+.filter{
+  margin: 5px auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.edit{
+  outline: auto;
+}
+
+#actiuni{
+  color:#1DA1F2;
+}
+
+#errors{
+  display: block;
+  text-align: left;
+  color: black;
+}
+
+.topnav {
+  background-color: #363630;
+  overflow: hidden;
+  height:50px;
+  width:100%;
+  margin-top:-10px;
+ 
+  
+}
+
+.topnav .centering{
+  margin: 0 auto;
+}
+
+.topnav a {
+  float: flex;
+  color: #f2f2f2;
+  text-align: center;
+  height:50px;
+  padding: 16px 16px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top:10px 10px 10px;
+  display: table-cell;
+  position: relative;
+  align-items: center;
+  
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: crimson;
+  color: white;
+}
+
+.button-logout{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  background-color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
